@@ -6,18 +6,31 @@ import MenuIcon from '@material-ui/icons/Menu';
 import SideDrawer from './SideDrawer';
 class Header extends Component {
   state = {
-    drawerOpen: false
+    drawerOpen: false,
+    headerShow: false
   };
 
   toogleDrawer = value => {
     this.setState({ drawerOpen: value });
+  };
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll = () => {
+    if (window.scrollY > 0) {
+      this.setState({ headerShow: true });
+    } else {
+      this.setState({ headerShow: false });
+    }
   };
   render() {
     return (
       <AppBar
         position="fixed"
         style={{
-          backgroundColor: '#2f2f2f',
+          backgroundColor: this.state.headerShow ? '#2f2f2f' : 'transparent',
           boxShadow: 'none',
           padding: '10px, 0px'
         }}
