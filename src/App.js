@@ -4,6 +4,7 @@ import Header from './components/header_footer/Header';
 import Featured from './components/Featured';
 import VenueInfo from './components/venueInfo';
 import Highlight from './components/Highlights';
+import Pricing from './components/pricing';
 function App() {
   return (
     <div className="App" style={{ height: '1500px', background: 'green' }}>
@@ -11,6 +12,7 @@ function App() {
       <Featured />
       <VenueInfo />
       <Highlight />
+      <Pricing />
     </div>
   );
 }
