@@ -4,7 +4,7 @@ import Header from './components/header_footer/Header';
 import Featured from './components/Featured';
 function App() {
   return (
-    <div className="App" style={{ height: '1500px', background: 'green' }}>
+    <div className="App">
       <Header />
       <Featured />
     </div>
